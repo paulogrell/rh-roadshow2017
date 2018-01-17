@@ -46,7 +46,7 @@
           "name": "http",
           "version": "V11"
         },
-        "host": "rhforum-rhforum-app-dev.apps.ocp.rhbrlab.com",
+        "host": "rhforum-rhforum-app-dev.apps.paas.rhbrlab.com",
         "path": "/rhforum/rest/clientes"
       },
       "id": "8c0caed4-9667-4df5-9186-c0361ed5eb00",

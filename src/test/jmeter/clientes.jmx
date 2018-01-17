@@ -40,7 +40,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">rhforum-rhforum-app-prod.apps.ocp.rhbrlab.com/rhforum</stringProp>
+          <stringProp name="HTTPSampler.domain">rhforum-rhforum-app-prod.apps.paas.rhbrlab.com/rhforum</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
