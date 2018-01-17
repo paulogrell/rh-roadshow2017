@@ -18,7 +18,7 @@ podTemplate(
       echo "\t cicd_project: ${cicd_project}"
       echo "=========================="
 
-      sh 'printenv'
+      //sh 'printenv'
     }
 
     stage('Checkout codigo fonte') {
@@ -30,17 +30,17 @@ podTemplate(
     def artifactId = getArtifactIdFromPom("pom.xml")
     def version    = getVersionFromPom("pom.xml")
 
-    stage('Testes unitarios') {
+    stage('Build e testes unitarios') {
       echo "Unit Tests"
       sh "${mvnCmd} test"
     }
 
     stage('Analise de codigo') {
      echo "Code Analysis"
-     sh "${mvnCmd} sonar:sonar -Dsonar.host.url=http://sonar.rhbrlab-cicd.svc.cluster.local:9000/ -Dsonar.projectName=rhforum"
+     sh "${mvnCmd} sonar:sonar -Dsonar.host.url=http://sonarqube.rhbrlab-cicd.svc.cluster.local:9000/ -Dsonar.projectName=rhforum"
     }
 
-    stage('Build WAR') {
+    stage('Build do WAR') {
       echo "Building version ${version}"
       sh "${mvnCmd} clean package -DskipTests"
     }
