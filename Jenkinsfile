@@ -141,7 +141,8 @@ podTemplate(
       sh "oc expose service ${dest} --path=/rhforum -n rhforum-app-prod || echo 'Rota já existe'"
 
       openshiftDeploy depCfg: dest, namespace: 'rhforum-app-prod', verbose: 'false', waitTime: '', waitUnit: 'sec'
-      openshiftVerifyDeployment depCfg: dest, namespace: 'rhforum-app-prod', replicaCount: '1', verbose: 'false', verifyReplicaCount: 'true', waitTime: '', waitUnit: 'sec'
+      //comentado para evitar problema com autoscale
+      //openshiftVerifyDeployment depCfg: dest, namespace: 'rhforum-app-prod', replicaCount: '1', verbose: 'false', verifyReplicaCount: 'true', waitTime: '', waitUnit: 'sec'
       openshiftVerifyService namespace: 'rhforum-app-prod', svcName: dest, verbose: 'false'
 
     }
