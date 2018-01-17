@@ -78,7 +78,7 @@
         },
         "bodyType": "Text",
         "autoSetLength": true,
-        "textBody": "{\n  \"nome\": \"Gustavo\",\n  \"sobrenome\": \"Luszczynski\"\n}"
+        "textBody": "{\n  \"nome\": \"Red Hat\",\n  \"sobrenome\": \"Openshift\"\n}"
       },
       "headersType": "Form",
       "uri": {
@@ -90,7 +90,7 @@
           "name": "http",
           "version": "V11"
         },
-        "host": "rhforum-rhforum-app-dev.apps.ocp.rhbrlab.com",
+        "host": "rhforum-rhforum-app-dev.apps.paas.rhbrlab.com",
         "path": "/rhforum/rest/clientes"
       },
       "id": "8e3da52f-1514-489f-9a88-90b6463da6ce",
