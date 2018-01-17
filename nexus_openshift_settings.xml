@@ -4,16 +4,16 @@
     <mirror>
       <id>Nexus</id>
       <name>Nexus Public Mirror</name>
-      <!-- <url>http://nexus.continuous-integration.svc.cluster.local:8081/repository/maven-all-public/</url> -->
-      <url>http://nexus.apps.ocp.rhbrlab.com/repository/maven-all-public/</url>
+      <!-- <url>http://nexus.rhbrlab-cicd.svc.cluster.local:8081/repository/maven-all-public/</url> -->
+      <url>http://nexus.apps.paas.rhbrlab.com/repository/maven-all-public/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
   <servers>
     <server>
       <id>nexus</id>
-      <username>admin</username>
-      <password>#r3dh4t1!</password>
+      <username>cicd</username>
+      <password>cicd@Nexus!</password>
     </server>
   </servers>
 </settings>
