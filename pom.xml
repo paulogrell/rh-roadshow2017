@@ -44,6 +44,7 @@
     <groupId>io.fabric8</groupId>
     <artifactId>fabric8-maven-plugin</artifactId>
     <version>3.1.92</version>
+    <!-- comentada para evitar rodar durante o pipeline na execução do Jenkins
     <executions>
       <execution>
         <goals>
@@ -52,6 +53,7 @@
         </goals>
       </execution>
     </executions>
+    -->
     <configuration>
       <generator>
         <includes>
