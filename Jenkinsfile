@@ -85,7 +85,7 @@ podTemplate(
             waitUntil {
 
                 def r = sh (
-                    script: 'curl -I -s http://rhforum-rhforum-app-dev.apps.ocp.rhbrlab.com/rhforum/rest/clientes | head -n 1 |cut -d$\' \' -f2',
+                    script: 'curl -I -s http://rhforum-rhforum-app-dev.apps.paas.rhbrlab.com/rhforum/rest/clientes | head -n 1 |cut -d$\' \' -f2',
                     returnStdout: true
                 ).trim()
                 return r.toInteger().equals(200);
