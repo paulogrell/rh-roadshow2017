@@ -11,6 +11,16 @@ podTemplate(
 
     def mvnCmd = "mvn -s ./nexus_openshift_settings.xml"
 
+    stage('ENV VARs') {
+      echo "=========================="
+      echo "env vars from BuildConfig"
+      echo "\t jenkins_project: ${jenkins_project}"
+      echo "\t cicd_project: ${cicd_project}"
+      echo "=========================="
+
+      sh 'printenv'
+    }
+
     stage('Checkout codigo fonte') {
       echo "Checkout"
       checkout scm
